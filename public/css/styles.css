@@ -1,0 +1,89 @@
+/* Custom styles for video chat app */
+
+/* Video Grid Layouts */
+.video-grid-1 {
+  grid-template-columns: 1fr;
+}
+
+.video-grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.video-grid-3 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.video-grid-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.video-grid-5,
+.video-grid-6 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Video styling */
+video {
+  background: #1f2937;
+}
+
+/* Button states */
+.btn-muted {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+.btn-disabled {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive video grid */
+@media (max-width: 768px) {
+  .video-grid-2,
+  .video-grid-3,
+  .video-grid-4,
+  .video-grid-5,
+  .video-grid-6 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
